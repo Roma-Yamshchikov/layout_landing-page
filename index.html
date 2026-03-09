@@ -233,6 +233,7 @@
 
             <div class="contacts__wrapper">
               <form
+                onsubmit="this.reset(); return false;"
                 action="#"
                 class="form"
                 method="post"
@@ -242,12 +243,15 @@
                   type="text"
                   placeholder="Name"
                   required
+                  autocomplete="name"
                   >
                 <input
                   class="form__item"
                   type="email"
                   placeholder="Email"
                   required
+                  autocomplete="email"
+                  name="email"
                   >
                 <textarea
                   class="form__item form__item--textarea "
@@ -255,7 +259,7 @@
                   placeholder="Massage"></textarea>
                 <button
                   class="button button--form"
-                  
+
                   >
                   Send
                 </button>
@@ -264,15 +268,17 @@
               <div class="contact-info">
                 <div class="contact-info__item">
                   <p class="contact-info__title">Phone</p>
-                  <p class="contact-info__description">+1 234 5555-55-55</p>
+                  <a class="contact-info__description" href="tel:+1 234 5555-55-55">+1 234 5555-55-55</a>
                 </div>
                 <div class="contact-info__item">
                   <p class="contact-info__title">Email</p>
-                  <p class="contact-info__description">hello@miami.com</p>
+                  <a class="contact-info__description" href="mailto:hello@miami.com">hello@miami.com</a>
                 </div>
                 <div class="contact-info__item">
                   <p class="contact-info__title">Address</p>
-                  <p class="contact-info__description">400 first ave.suite 700 Minneapolis, MN 55401</p>
+                  <a class="contact-info__description" href="https://www.google.com/maps/place/400+N+1st+Ave+STE+700,+Minneapolis,+MN+55401,+%D0%A1%D0%A8%D0%90/@44.9810374,-93.2833664,2505m/data=!3m1!1e3!4m15!1m8!3m7!1s0x52b3328fdf233887:0x3348e5113ed2472d!2s400+N+1st+Ave+STE+700,+Minneapolis,+MN+55401,+%D0%A1%D0%A8%D0%90!3b1!8m2!3d44.9813258!4d-93.2731311!16s%2Fg%2F11nyn_tfyt!3m5!1s0x52b3328fdf233887:0x3348e5113ed2472d!8m2!3d44.9813258!4d-93.2731311!16s%2Fg%2F11nyn_tfyt?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    400 first ave.suite 700 Minneapolis, MN 55401
+                  </a>
                 </div>
               </div>
             </div>
