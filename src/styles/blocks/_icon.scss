@@ -12,19 +12,35 @@
   }
 
   &--phone {
-    position: relative;
-
-    @include on-desktop {
+    @include on-tablet {
+      position: relative;
+      background-image: url(/src/images/icons/phone-icon.png);
       &::before {
-        content: url(../images/icons/icon-phone-number.png);
+        content: '+1 234 555-55-55';
+        white-space: nowrap;
         position: absolute;
-        visibility: hidden;
-        top: 5px;
-        right: 50px;
+        right: 40px;
+        top: 50%;
+        font-family: Poppins, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 2px;
+        text-align: right;
+        vertical-align: middle;
+        text-transform: uppercase;
+        transform: translateX(15%) translateY(-50%);
+
+        text-decoration: none;
+        color: $main-color-text;
+        pointer-events: none;
+        opacity: 0;
+        transition: all $effectDuration;
       }
 
       &:hover::before {
-        visibility: visible;
+        transform: translateX(0) translateY(-50%);
+        opacity: 1;
       }
     }
 
